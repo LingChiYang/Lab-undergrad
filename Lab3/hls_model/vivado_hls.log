@@ -1,0 +1,318 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/home/xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'hisky' on host 'r7515ed520.EE.NCTU.edu.tw' (Linux_x86_64 version 3.10.0-1160.90.1.el7.x86_64) on Sat Jul 08 02:56:19 CST 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/hisky/Lab-undergrad/Lab3/hls_model'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Opening project '/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Opening solution '/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+***** C SIMULATION *****
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../firmware/myproject.cpp in debug mode
+   Generating csim.exe
+Processing input 0
+Predictions
+12 
+Quantized predictions
+-29 INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+***** C SIMULATION COMPLETED IN 0h0m1s *****
+***** C/RTL SYNTHESIS *****
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:29:69
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:29:73
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1728 ; free virtual = 69084
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1728 ; free virtual = 69084
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::dot_product<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'myproject' (firmware/myproject.cpp:29).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1717 ; free virtual = 69075
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1711 ; free virtual = 69069
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:17) to a process function for dataflow in function 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 2 process function(s): 
+	 'Loop_1_proc20'
+	 'Block_myproject_.exit_proc'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1691 ; free virtual = 69049
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1672 ; free virtual = 69030
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_.exit_proc' to 'Block_myproject_exit_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_1_proc20' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.96 seconds; current allocated memory: 143.804 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 143.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 143.993 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 144.042 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 144.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 144.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_1_proc20' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_12ns_16s_26ns_26_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_1_proc20'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 144.499 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_myproject_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_myproject_exit_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 145.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer2_out_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 145.451 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 232.34 MHz
+INFO: [RTMG 210-279] Implementing memory 'Loop_1_proc20_w2_V_rom' using distributed ROMs.
+INFO: [RTMG 210-285] Implementing FIFO 'p_Val2_loc_channel_U(fifo_w16_d2_A)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1047.031 ; gain = 526.992 ; free physical = 1668 ; free virtual = 69027
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
+***** C/RTL SYNTHESIS COMPLETED IN 0h0m17s *****
+***** C/RTL SIMULATION *****
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling myproject_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_myproject.cpp
+   Compiling myproject.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Processing input 0
+Predictions
+12 
+Quantized predictions
+-29 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-302] Starting C TB testing ...  
+Processing input 0
+Predictions
+12 
+Quantized predictions
+-29 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-323] Starting verilog simulation...
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/AESL_axi_s_layer2_out_V_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_layer2_out_V_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/Loop_1_proc20.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_1_proc20
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/Block_myproject_exit_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_myproject_exit_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/myproject_mac_muladd_12ns_16s_26ns_26_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mac_muladd_12ns_16s_26ns_26_3_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module myproject_mac_muladd_12ns_16s_26ns_26_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/Loop_1_proc20_w2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_1_proc20_w2_V_rom
+INFO: [VRFC 10-311] analyzing module Loop_1_proc20_w2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Loop_1_proc20_w2_V_rom
+Compiling module xil_defaultlib.Loop_1_proc20_w2_V(DataWidth=12,...
+Compiling module xil_defaultlib.myproject_mac_muladd_12ns_16s_26...
+Compiling module xil_defaultlib.myproject_mac_muladd_12ns_16s_26...
+Compiling module xil_defaultlib.ibuf(W=17)
+Compiling module xil_defaultlib.obuf(W=17)
+Compiling module xil_defaultlib.regslice_both(DataWidth=16)
+Compiling module xil_defaultlib.Loop_1_proc20
+Compiling module xil_defaultlib.Block_myproject_exit_proc
+Compiling module xil_defaultlib.fifo_w16_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w16_d2_A
+Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.fifo(DEPTH=10,WIDTH=16)
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_V
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=16)
+Compiling module xil_defaultlib.AESL_axi_s_layer2_out_V_V
+Compiling module xil_defaultlib.apatb_myproject_top
+Compiling module work.glbl
+Built simulation snapshot myproject
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Jul  8 02:56:59 2023. For additional details about this file, please refer to the WebTalk help file at /home/xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Jul  8 02:56:59 2023...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/myproject/xsim_script.tcl
+# xsim {myproject} -autoloadwcfg -tclbatch {myproject.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source myproject.tcl
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set layer2_out_group [add_wave_group layer2_out(axis) -into $coutputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_V_V_TREADY -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_V_V_TVALID -into $layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/layer2_out_V_V_TDATA -into $layer2_out_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set input_1_group [add_wave_group input_1(axis) -into $cinputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_V_V_TREADY -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_V_V_TVALID -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_V_V_TDATA -into $input_1_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_start -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_done -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_ready -into $blocksiggroup
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_idle -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_myproject_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_V_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_layer2_out_V_V -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_layer2_out_group [add_wave_group layer2_out(axis) -into $tbcoutputgroup]
+## add_wave /apatb_myproject_top/layer2_out_V_V_TREADY -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_V_V_TVALID -into $tb_layer2_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/layer2_out_V_V_TDATA -into $tb_layer2_out_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_input_1_group [add_wave_group input_1(axis) -into $tbcinputgroup]
+## add_wave /apatb_myproject_top/input_1_V_V_TREADY -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_V_V_TVALID -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_V_V_TDATA -into $tb_input_1_group -radix hex
+## save_wave_config myproject.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 5 [0.00%] @ "113000"
+// RTL Simulation : 1 / 5 [7.14%] @ "203000"
+// RTL Simulation : 2 / 5 [7.14%] @ "278000"
+// RTL Simulation : 3 / 5 [7.14%] @ "353000"
+// RTL Simulation : 4 / 5 [7.14%] @ "428000"
+// RTL Simulation : 5 / 5 [100.00%] @ "503000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 522500 ps : File "/home/hisky/Lab-undergrad/Lab3/hls_model/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 249
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Jul  8 02:57:09 2023...
+INFO: [COSIM 212-316] Starting C post checking ...
+Processing input 0
+Predictions
+12 
+Quantized predictions
+-29 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO:
+Report time       : Sat Jul  8 02:56:54 CST 2023.
+Solution          : solution1.
+Simulation tool   : xsim.
+
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|          |          |                    Latency                    |                    Interval                   |
++   RTL    +  Status  +-----------------------------------------------+-----------------------------------------------+
+|          |          |      min      |      avg      |      max      |      min      |      avg      |      max      |
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|      VHDL|        NA|             NA|             NA|             NA|             NA|             NA|             NA|
+|   Verilog|      Pass|             NA|             NA|             NA|             NA|             NA|             NA|
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+
+***** C/RTL SIMULATION COMPLETED IN 0h0m29s *****
+***** C/RTL VALIDATION *****
+INFO: Test PASSED
+INFO: [HLS 200-112] Total elapsed time: 50.65 seconds; peak allocated memory: 145.451 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jul  8 02:57:09 2023...
