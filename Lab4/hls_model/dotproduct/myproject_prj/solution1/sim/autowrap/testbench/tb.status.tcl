@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

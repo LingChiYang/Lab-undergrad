@@ -1,0 +1,82 @@
+AcceleratorConfig:
+  Board: pynq-z2
+  Driver: python
+  Interface: axi_stream
+  Precision:
+    Input: float
+    Output: float
+Backend: VivadoAccelerator
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    conv2d_3:
+      Precision:
+        bias: ap_fixed<32,16>
+        result: ap_fixed<32,16>
+        weight: ap_fixed<32,16>
+      Trace: false
+    conv2d_3_relu:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    conv2d_4:
+      Precision:
+        bias: ap_fixed<32,16>
+        result: ap_fixed<32,16>
+        weight: ap_fixed<32,16>
+      Trace: false
+    conv2d_4_relu:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    dense_2:
+      Precision:
+        bias: ap_fixed<32,16>
+        result: ap_fixed<32,16>
+        weight: ap_fixed<32,16>
+      Trace: false
+    dense_2_relu:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    dense_3:
+      Precision:
+        bias: ap_fixed<32,16>
+        result: ap_fixed<32,16>
+        weight: ap_fixed<32,16>
+      Trace: false
+    dense_3_softmax:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    flatten_1:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    input_3:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    max_pooling2d_2:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    max_pooling2d_3:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<32,16>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+    strategy: Resource
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model './hls_model/mnist/keras_model.h5'
+OutputDir: ./hls_model/mnist
+OutputPredictions: null
+Part: xc7z020clg400-1
+ProjectName: myproject
+Stamp: EadAD2D8

@@ -1,0 +1,179 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_0_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_0_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_1_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_1_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_3_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_3_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_4_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_4_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_5_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_5_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_6_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_6_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_7_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_7_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_8_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_8_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_9_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_9_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_10_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_10_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_11_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_11_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_12_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_12_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_13_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_13_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_14_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_14_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_15_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_15_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_16_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_16_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_17_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_17_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_18_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_18_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_19_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_19_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_20_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_20_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_21_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_21_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_22_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_22_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_23_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_23_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_24_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_24_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_25_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_25_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_26_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_26_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_27_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_27_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_28_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_28_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_29_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_29_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_30_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_30_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_input_1_V_data_31_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_1_V_data_31_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_axi_s_layer2_out_V_data_0_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_layer2_out_V_data_0_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/Block_preheader_i_i_04_proc27.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_preheader_i_i_04_proc27
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/Loop_1_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_1_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/myproject_mul_15s_32s_47_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mul_15s_32s_47_5_1_MulnS_0
+INFO: [VRFC 10-311] analyzing module myproject_mul_15s_32s_47_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/Loop_1_proc_w2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_1_proc_w2_V_rom
+INFO: [VRFC 10-311] analyzing module Loop_1_proc_w2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/fifo_w32_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/fifo_w32_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/sim/verilog/start_for_Loop_1_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_1_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_1_proc_U0
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ibuf(W=33)
+Compiling module xil_defaultlib.obuf(W=33)
+Compiling module xil_defaultlib.regslice_both_default
+Compiling module xil_defaultlib.Block_preheader_i_i_04_proc27
+Compiling module xil_defaultlib.Loop_1_proc_w2_V_rom
+Compiling module xil_defaultlib.Loop_1_proc_w2_V(DataWidth=15,Ad...
+Compiling module xil_defaultlib.myproject_mul_15s_32s_47_5_1_Mul...
+Compiling module xil_defaultlib.myproject_mul_15s_32s_47_5_1(ID=...
+Compiling module xil_defaultlib.Loop_1_proc
+Compiling module xil_defaultlib.Block_dot_product_array_array_ap...
+Compiling module xil_defaultlib.fifo_w32_d32_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d32_A
+Compiling module xil_defaultlib.fifo_w32_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d2_A
+Compiling module xil_defaultlib.start_for_Loop_1_proc_U0_shiftRe...
+Compiling module xil_defaultlib.start_for_Loop_1_proc_U0
+Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=32)
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_0_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_1_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_2_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_3_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_4_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_5_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_6_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_7_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_8_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_9_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_10_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_11_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_12_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_13_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_14_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_15_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_16_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_17_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_18_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_19_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_20_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_21_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_22_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_23_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_24_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_25_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_26_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_27_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_28_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_29_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_30_V
+Compiling module xil_defaultlib.AESL_axi_s_input_1_V_data_31_V
+Compiling module xil_defaultlib.AESL_axi_s_layer2_out_V_data_0_V
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.apatb_myproject_top
+Compiling module work.glbl
+Built simulation snapshot myproject

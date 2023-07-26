@@ -1,0 +1,954 @@
+
+*** Running vivado
+    with args -log design_1_myproject_axi_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_myproject_axi_0_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_myproject_axi_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_1_myproject_axi_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10020 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1983.168 ; gain = 202.715 ; free physical = 19264 ; free virtual = 99798
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_myproject_axi_0_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ip/design_1_myproject_axi_0_0/synth/design_1_myproject_axi_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Block_codeRepl1107_proc46' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_state3 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_state4 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state5 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_state6 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_state7 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_state8 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_state9 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state10 bound to: 10'b1000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:292]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_fpext_32ns_64_3_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_fpext_32ns_64_3_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_ap_fpext_1_no_dsp_32' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/ip/myproject_axi_ap_fpext_1_no_dsp_32.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/ip/myproject_axi_ap_fpext_1_no_dsp_32.vhd:205]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_ap_fpext_1_no_dsp_32' (11#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/ip/myproject_axi_ap_fpext_1_no_dsp_32.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_fpext_32ns_64_3_1' (12#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_fpext_32ns_64_3_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_ashr_54ns_32ns_54_2_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_ashr_54ns_32ns_54_2_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+	Parameter OP bound to: 2 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter K bound to: 16 - type: integer 
+	Parameter LATENCY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_ashr_54ns_32ns_54_2_1' (13#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_ashr_54ns_32ns_54_2_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_shl_32ns_32s_32_2_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_32ns_32s_32_2_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter K bound to: 16 - type: integer 
+	Parameter LATENCY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_shl_32ns_32s_32_2_1' (14#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_32ns_32s_32_2_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_shl_1024ns_11ns_1024_2_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_1024ns_11ns_1024_2_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1024 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 1024 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter K bound to: 6 - type: integer 
+	Parameter LATENCY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_shl_1024ns_11ns_1024_2_1' (15#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_1024ns_11ns_1024_2_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf' (16#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf' (17#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both' (18#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both__parameterized0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf__parameterized0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf__parameterized0' (18#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf__parameterized0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf__parameterized0' (18#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both__parameterized0' (18#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/regslice_core.v:8]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1478]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1480]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1482]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1484]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1486]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1488]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1490]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1492]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1494]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1496]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'Block_codeRepl1107_proc46' (19#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:10]
+INFO: [Synth 8-6157] synthesizing module 'myproject' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject.v:10]
+INFO: [Synth 8-6157] synthesizing module 'myproject_Block_preheader_i_i_033_proc45' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_preheader_i_i_033_proc45.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1 - type: integer 
+	Parameter ap_ST_fsm_state2 bound to: 2 - type: integer 
+	Parameter ap_ST_fsm_state3 bound to: 4 - type: integer 
+	Parameter ap_ST_fsm_state4 bound to: 8 - type: integer 
+	Parameter ap_ST_fsm_state5 bound to: 16 - type: integer 
+	Parameter ap_ST_fsm_state6 bound to: 32 - type: integer 
+	Parameter ap_ST_fsm_state7 bound to: 64 - type: integer 
+	Parameter ap_ST_fsm_state8 bound to: 128 - type: integer 
+	Parameter ap_ST_fsm_state9 bound to: 256 - type: integer 
+	Parameter ap_ST_fsm_state10 bound to: 512 - type: integer 
+	Parameter ap_ST_fsm_state11 bound to: 1024 - type: integer 
+	Parameter ap_ST_fsm_state12 bound to: 2048 - type: integer 
+	Parameter ap_ST_fsm_state13 bound to: 4096 - type: integer 
+	Parameter ap_ST_fsm_state14 bound to: 8192 - type: integer 
+	Parameter ap_ST_fsm_state15 bound to: 16384 - type: integer 
+	Parameter ap_ST_fsm_state16 bound to: 32768 - type: integer 
+	Parameter ap_ST_fsm_state17 bound to: 65536 - type: integer 
+	Parameter ap_ST_fsm_state18 bound to: 131072 - type: integer 
+	Parameter ap_ST_fsm_state19 bound to: 262144 - type: integer 
+	Parameter ap_ST_fsm_state20 bound to: 524288 - type: integer 
+	Parameter ap_ST_fsm_state21 bound to: 1048576 - type: integer 
+	Parameter ap_ST_fsm_state22 bound to: 2097152 - type: integer 
+	Parameter ap_ST_fsm_state23 bound to: 4194304 - type: integer 
+	Parameter ap_ST_fsm_state24 bound to: 8388608 - type: integer 
+	Parameter ap_ST_fsm_state25 bound to: 16777216 - type: integer 
+	Parameter ap_ST_fsm_state26 bound to: 33554432 - type: integer 
+	Parameter ap_ST_fsm_state27 bound to: 67108864 - type: integer 
+	Parameter ap_ST_fsm_state28 bound to: 134217728 - type: integer 
+	Parameter ap_ST_fsm_state29 bound to: 268435456 - type: integer 
+	Parameter ap_ST_fsm_state30 bound to: 536870912 - type: integer 
+	Parameter ap_ST_fsm_state31 bound to: 1073741824 - type: integer 
+	Parameter ap_ST_fsm_state32 bound to: -2147483648 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_preheader_i_i_033_proc45.v:306]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_Block_preheader_i_i_033_proc45' (20#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_preheader_i_i_033_proc45.v:10]
+INFO: [Synth 8-6157] synthesizing module 'myproject_Loop_1_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 9'b000000001 
+	Parameter ap_ST_fsm_state2 bound to: 9'b000000010 
+	Parameter ap_ST_fsm_state3 bound to: 9'b000000100 
+	Parameter ap_ST_fsm_state4 bound to: 9'b000001000 
+	Parameter ap_ST_fsm_state5 bound to: 9'b000010000 
+	Parameter ap_ST_fsm_state6 bound to: 9'b000100000 
+	Parameter ap_ST_fsm_state7 bound to: 9'b001000000 
+	Parameter ap_ST_fsm_state8 bound to: 9'b010000000 
+	Parameter ap_ST_fsm_state9 bound to: 9'b100000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc.v:52]
+INFO: [Synth 8-6157] synthesizing module 'myproject_Loop_1_proc_w2_V' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:39]
+	Parameter DataWidth bound to: 15 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'myproject_Loop_1_proc_w2_V_rom' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:6]
+	Parameter DWIDTH bound to: 15 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:18]
+INFO: [Synth 8-3876] $readmem data file './myproject_Loop_1_proc_w2_V_rom.dat' is read successfully [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_Loop_1_proc_w2_V_rom' (21#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_Loop_1_proc_w2_V' (22#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc_w2_V.v:39]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_mul_15s_32s_47_5_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_mul_15s_32s_47_5_1.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 47 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_mul_15s_32s_47_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' (23#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_mul_15s_32s_47_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_mul_15s_32s_47_5_1' (24#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_mul_15s_32s_47_5_1.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_Loop_1_proc' (25#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Loop_1_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' (26#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d32_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d32_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 6'b100000 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d32_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d32_A.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 6'b100000 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d32_A_shiftReg' (27#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d32_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d32_A' (28#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d32_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d2_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d2_A.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A_shiftReg' (29#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d2_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A' (30#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d2_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'start_for_myproject_Loop_1_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_Loop_1_proc_U0.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'start_for_myproject_Loop_1_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_Loop_1_proc_U0.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_myproject_Loop_1_proc_U0_shiftReg' (31#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_Loop_1_proc_U0.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_myproject_Loop_1_proc_U0' (32#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_Loop_1_proc_U0.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'myproject' (33#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Block_myproject_axi_exit1109_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 11'b00000000001 
+	Parameter ap_ST_fsm_state2 bound to: 11'b00000000010 
+	Parameter ap_ST_fsm_state3 bound to: 11'b00000000100 
+	Parameter ap_ST_fsm_state4 bound to: 11'b00000001000 
+	Parameter ap_ST_fsm_state5 bound to: 11'b00000010000 
+	Parameter ap_ST_fsm_state6 bound to: 11'b00000100000 
+	Parameter ap_ST_fsm_state7 bound to: 11'b00001000000 
+	Parameter ap_ST_fsm_state8 bound to: 11'b00010000000 
+	Parameter ap_ST_fsm_state9 bound to: 11'b00100000000 
+	Parameter ap_ST_fsm_state10 bound to: 11'b01000000000 
+	Parameter ap_ST_fsm_state11 bound to: 11'b10000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:67]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_lshr_32ns_32ns_32_2_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_lshr_32ns_32ns_32_2_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+	Parameter OP bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter K bound to: 16 - type: integer 
+	Parameter LATENCY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_lshr_32ns_32ns_32_2_1' (34#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_lshr_32ns_32ns_32_2_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'myproject_axi_shl_64ns_32ns_64_2_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_64ns_32ns_64_2_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+	Parameter OP bound to: 0 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter K bound to: 16 - type: integer 
+	Parameter LATENCY bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi_shl_64ns_32ns_64_2_1' (35#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi_shl_64ns_32ns_64_2_1.v:8]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:557]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:567]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:589]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:603]
+INFO: [Synth 8-6155] done synthesizing module 'Block_myproject_axi_exit1109_proc' (36#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d1_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d1_A.v:42]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b01 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d1_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d1_A.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d1_A_shiftReg' (37#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d1_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d1_A' (38#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d1_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d3_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w1_d3_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d3_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w1_d3_A.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d3_A_shiftReg' (39#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w1_d3_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d3_A' (40#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w1_d3_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'start_for_myproject_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_U0.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'start_for_myproject_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_U0.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_myproject_U0_shiftReg' (41#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_U0.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_myproject_U0' (42#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_myproject_U0.v:42]
+INFO: [Synth 8-6157] synthesizing module 'start_for_Block_myproject_axi_exit1109_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'start_for_Block_myproject_axi_exit1109_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Block_myproject_axi_exit1109_proc_U0_shiftReg' (43#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Block_myproject_axi_exit1109_proc_U0' (44#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'myproject_axi' (45#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/myproject_axi.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_myproject_axi_0_0' (46#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ip/design_1_myproject_axi_0_0/synth/design_1_myproject_axi_0_0.v:58]
+WARNING: [Synth 8-3331] design fifo_w32_d1_A_shiftReg has unconnected port a[0]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[63]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[62]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[61]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[60]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[59]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[58]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[57]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[56]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[55]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[54]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[53]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[52]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[51]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[50]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[49]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[48]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[47]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[46]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[45]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[44]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[43]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[42]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[41]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[40]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[39]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[38]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[37]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[36]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[35]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[34]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[33]
+WARNING: [Synth 8-3331] design myproject_axi_shl_64ns_32ns_64_2_1 has unconnected port din1[32]
+WARNING: [Synth 8-3331] design myproject_axi_mul_15s_32s_47_5_1 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_Loop_1_proc_w2_V has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1023]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1022]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1021]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1020]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1019]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1018]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1017]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1016]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1015]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1014]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1013]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1012]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1011]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1010]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1009]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1008]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1007]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1006]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1005]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1004]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1003]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1002]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1001]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[1000]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[999]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[998]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[997]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[996]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[995]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[994]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[993]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[992]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[991]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[990]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[989]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[988]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[987]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[986]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[985]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[984]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[983]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[982]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[981]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[980]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[979]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[978]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[977]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[976]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[975]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[974]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[973]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[972]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[971]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[970]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[969]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[968]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[967]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[966]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[965]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[964]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[963]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[962]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[961]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[960]
+WARNING: [Synth 8-3331] design myproject_axi_shl_1024ns_11ns_1024_2_1 has unconnected port din1[959]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2099.859 ; gain = 319.406 ; free physical = 18939 ; free virtual = 99485
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 2117.668 ; gain = 337.215 ; free physical = 18873 ; free virtual = 99423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 2117.668 ; gain = 337.215 ; free physical = 18873 ; free virtual = 99423
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2120.637 ; gain = 0.000 ; free physical = 18838 ; free virtual = 99388
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ip/design_1_myproject_axi_0_0/constraints/myproject_axi_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ip/design_1_myproject_axi_0_0/constraints/myproject_axi_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.runs/design_1_myproject_axi_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.runs/design_1_myproject_axi_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2274.480 ; gain = 0.000 ; free physical = 18868 ; free virtual = 99417
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2274.480 ; gain = 0.000 ; free physical = 18975 ; free virtual = 99521
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 19455 ; free virtual = 100001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 19455 ; free virtual = 100001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.runs/design_1_myproject_axi_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 19455 ; free virtual = 100001
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'ashr_ln586_reg_1338_reg' and it is trimmed from '54' to '32' bits. [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_codeRepl1107_proc46.v:625]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/fifo_w32_d32_A.v:90]
+WARNING: [Synth 8-3936] Found unconnected internal register 'm_5_reg_487_reg' and it is trimmed from '63' to '23' bits. [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:285]
+INFO: [Synth 8-4471] merging register 'trunc_ln943_reg_413_reg[5:0]' into 'l_reg_408_reg[5:0]' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:257]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:41 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 19296 ; free virtual = 99843
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized2) to 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized2) to 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized2) to 'inst/Block_codeRepl1107_proc46_U0/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |Block_codeRepl1107_proc46__GB0            |           1|     36766|
+|2     |datapath__9_Block_codeRepl1107_proc46__GD |           1|     11264|
+|3     |myproject_axi__GC0                        |           1|     13110|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+WARNING: [Synth 8-3936] Found unconnected internal register 'shl_ln958_reg_482_reg' and it is trimmed from '64' to '26' bits. [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:279]
+WARNING: [Synth 8-3936] Found unconnected internal register 'lshr_ln958_reg_477_reg' and it is trimmed from '32' to '26' bits. [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.srcs/sources_1/bd/design_1/ipshared/7c5b/hdl/verilog/Block_myproject_axi_exit1109_proc.v:278]
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[32]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[33]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[34]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[35]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[36]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[37]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[38]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[39]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[40]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[41]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[42]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[43]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[44]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[45]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[46]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[47]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[48]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[49]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[50]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[51]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[0]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[1]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[2]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[3]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[4]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[5]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[6]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[7]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[8]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[9]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[10]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[11]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[12]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[13]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[14]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[15]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[16]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[17]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[18]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[19]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[20]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[21]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[22]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[23]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[24]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[25]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[26]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[27]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/\myproject_axi_ap_fpext_1_no_dsp_32_u/U0 /i_synth/\FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.mant_op_reg[28] )
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.exp_op_reg[7]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.exp_op_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.exp_op_reg[8]' (FDRE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_fpext_32ns_64_3_1_U1/myproject_axi_ap_fpext_1_no_dsp_32_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/OUTPUT/RESULT_REG.NORMAL.exp_op_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[0]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[2]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[1]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[6]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[4]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[5]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[3]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[14]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[10]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[12]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[8]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[13]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[9]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[11]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[7]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[30]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[22]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[26]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[18]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[28]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[20]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[24]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[16]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[29]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[21]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[25]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[17]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[27]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[19]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[23]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[15]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/select_ln570_reg_1267_reg[31]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln583_reg_1296_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[0]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[1]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[2]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[3]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[4]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[5]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[6]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[7]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[8]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[9]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[10]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[11]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[12]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[13]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[14]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[15]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[16]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln565_reg_1262_reg[17]' (FDE) to 'inst/Block_codeRepl1107_proc46_U0i_1_1/trunc_ln557_reg_1247_reg[17]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/\select_ln203_2_reg_1371_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][480] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][481] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][482] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][483] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][484] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][485] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][486] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][487] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][488] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][489] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][490] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][491] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][492] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][493] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][494] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][495] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][496] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][497] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][498] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][499] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][500] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][501] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][502] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][503] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][504] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][505] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][506] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][507] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][508] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][509] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][510] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][511] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][447] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][446] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][445] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][444] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][443] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][442] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][441] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][440] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][439] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][438] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][437] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][436] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][435] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][434] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][433] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][432] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][431] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][430] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][429] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][428] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][427] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][426] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][425] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][424] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][423] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][422] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][421] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][420] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][419] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][418] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][417] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][416] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][544] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][545] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][546] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][547] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][548] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][549] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][550] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][551] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][552] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][553] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][554] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][555] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][556] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][557] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][558] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][559] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][560] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][561] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][562] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][563] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][564] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][565] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][566] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][567] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][568] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][569] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][570] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][571] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][572] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][573] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][574] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][575] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][383] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Block_codeRepl1107_proc46_U0i_1_1/myproject_axi_shl_1024ns_11ns_1024_2_1_U4/\dout_array_reg[0][382] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:56 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 19086 ; free virtual = 99652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |Block_codeRepl1107_proc46__GB0            |           1|     10071|
+|2     |datapath__9_Block_codeRepl1107_proc46__GD |           1|        37|
+|3     |myproject_axi__GC0                        |           1|     10840|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:08 . Memory (MB): peak = 2274.480 ; gain = 494.027 ; free physical = 18712 ; free virtual = 99303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 2481.508 ; gain = 701.055 ; free physical = 20304 ; free virtual = 100885
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |datapath__9_Block_codeRepl1107_proc46__GD |           1|        37|
+|2     |myproject_axi_GT0                         |           1|     20853|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:31 . Memory (MB): peak = 2481.508 ; gain = 701.055 ; free physical = 20239 ; free virtual = 100820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 19847 ; free virtual = 100445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 19842 ; free virtual = 100439
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 20600 ; free virtual = 101187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 20598 ; free virtual = 101185
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 20587 ; free virtual = 101174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 20583 ; free virtual = 101170
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    76|
+|2     |DSP48E1 |     2|
+|3     |LUT1    |   187|
+|4     |LUT2    |   356|
+|5     |LUT3    |  1367|
+|6     |LUT4    |   220|
+|7     |LUT5    |   798|
+|8     |LUT6    |   921|
+|9     |MUXCY   |     4|
+|10    |MUXF7   |     1|
+|11    |SRL16E  |     1|
+|12    |SRLC32E |    32|
+|13    |FDRE    |  5984|
+|14    |FDSE    |    88|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:35 . Memory (MB): peak = 2481.512 ; gain = 701.059 ; free physical = 20582 ; free virtual = 101169
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:31 . Memory (MB): peak = 2481.512 ; gain = 544.246 ; free physical = 20626 ; free virtual = 101213
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:36 . Memory (MB): peak = 2481.516 ; gain = 701.059 ; free physical = 20626 ; free virtual = 101213
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2481.516 ; gain = 0.000 ; free physical = 20492 ; free virtual = 101078
+INFO: [Netlist 29-17] Analyzing 83 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2513.527 ; gain = 0.000 ; free physical = 20462 ; free virtual = 101049
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+317 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:46 . Memory (MB): peak = 2513.527 ; gain = 961.703 ; free physical = 20596 ; free virtual = 101183
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2513.527 ; gain = 0.000 ; free physical = 20596 ; free virtual = 101182
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.runs/design_1_myproject_axi_0_0_synth_1/design_1_myproject_axi_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_myproject_axi_0_0, cache-ID = 6eb06672f98fd8c7
+INFO: [Coretcl 2-1174] Renamed 113 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2537.543 ; gain = 0.000 ; free physical = 20673 ; free virtual = 101269
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_vivado_accelerator/project_1.runs/design_1_myproject_axi_0_0_synth_1/design_1_myproject_axi_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_myproject_axi_0_0_utilization_synth.rpt -pb design_1_myproject_axi_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 18 16:03:35 2023...

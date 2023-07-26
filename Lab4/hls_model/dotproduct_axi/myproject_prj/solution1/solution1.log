@@ -1,0 +1,536 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:69
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:73
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject_axi.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:17:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:29:5
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject_axi.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 979.074 ; gain = 459.035 ; free physical = 24771 ; free virtual = 104812
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 979.074 ; gain = 459.035 ; free physical = 24771 ; free virtual = 104812
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:22).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[].1' into 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator=' (firmware/nnet_utils/nnet_types.h:29).
+INFO: [XFORM 203-603] Inlining function 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' into 'myproject' (firmware/myproject.cpp:31).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 979.074 ; gain = 459.035 ; free physical = 24751 ; free virtual = 104794
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/myproject_axi.cpp:33: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 979.074 ; gain = 459.035 ; free physical = 24737 ; free virtual = 104782
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:1) on argument 'input_1.V.data.V' (firmware/myproject.cpp:7). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:94) on argument 'layer2_out.V.data.V' (firmware/myproject.cpp:8). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data' (firmware/myproject_axi.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data' (firmware/myproject_axi.cpp:3).
+INFO: [XFORM 203-1101] Packing variable 'ctype.data.V' (firmware/myproject_axi.cpp:18) into a 1024-bit variable.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_types.h:27) in function 'myproject' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'tmpdata.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:20) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'in_local.V.data.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'in_local.V.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-721] Change variable 'tmpdata1.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:21) to FIFO automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:24) to a process function for dataflow in function 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'myproject_Block_.preheader.i.i.033_proc45'
+	 'myproject_Loop_1_proc'
+	 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject_axi', detected/extracted 3 process function(s): 
+	 'Block_codeRepl1107_proc46'
+	 'myproject'
+	 'Block_myproject_axi_.exit1109_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'Block_myproject_axi_.exit1109_proc'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:22:25) to (firmware/myproject_axi.cpp:20:41) in function 'Block_codeRepl1107_proc46'... converting 10 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 24708 ; free virtual = 104755
+WARNING: [XFORM 203-631] Renaming function 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc' to 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:27:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1043.074 ; gain = 523.035 ; free physical = 24657 ; free virtual = 104704
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_.preheader.i.i.033_proc45' to 'myproject_Block_preheader_i_i_033_proc45'.
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' to 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_axi_.exit1109_proc' to 'Block_myproject_axi_exit1109_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.53 seconds; current allocated memory: 205.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 206.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 207.183 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 207.669 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 208.001 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 208.134 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 208.167 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 208.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 208.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 208.665 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_axi_exit1109_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 208.865 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 209.159 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 209.409 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 210.240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_ashr_54ns_32ns_54_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_fpext_32ns_64_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_1024ns_11ns_1024_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_32ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_codeRepl1107_proc46'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 211.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_preheader_i_i_033_proc45'.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 216.774 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mul_15s_32s_47_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 218.462 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 218.982 MB.
+INFO: [HLS 200-10]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:69
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:73
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject_axi.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:17:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:29:5
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject_axi.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24619 ; free virtual = 104709
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24619 ; free virtual = 104709
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:22).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[].1' into 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator=' (firmware/nnet_utils/nnet_types.h:29).
+INFO: [XFORM 203-603] Inlining function 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' into 'myproject' (firmware/myproject.cpp:31).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24603 ; free virtual = 104693
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/myproject_axi.cpp:33: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24592 ; free virtual = 104683
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:1) on argument 'input_1.V.data.V' (firmware/myproject.cpp:7). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:94) on argument 'layer2_out.V.data.V' (firmware/myproject.cpp:8). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data' (firmware/myproject_axi.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data' (firmware/myproject_axi.cpp:3).
+INFO: [XFORM 203-1101] Packing variable 'ctype.data.V' (firmware/myproject_axi.cpp:18) into a 1024-bit variable.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_types.h:27) in function 'myproject' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'tmpdata.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:20) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'in_local.V.data.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'in_local.V.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-721] Change variable 'tmpdata1.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:21) to FIFO automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:24) to a process function for dataflow in function 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'myproject_Block_.preheader.i.i.033_proc45'
+	 'myproject_Loop_1_proc'
+	 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject_axi', detected/extracted 3 process function(s): 
+	 'Block_codeRepl1107_proc46'
+	 'myproject'
+	 'Block_myproject_axi_.exit1109_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'Block_myproject_axi_.exit1109_proc'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:22:25) to (firmware/myproject_axi.cpp:20:41) in function 'Block_codeRepl1107_proc46'... converting 10 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24560 ; free virtual = 104651
+WARNING: [XFORM 203-631] Renaming function 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc' to 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:27:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1052.969 ; gain = 532.930 ; free physical = 24508 ; free virtual = 104599
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_.preheader.i.i.033_proc45' to 'myproject_Block_preheader_i_i_033_proc45'.
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' to 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_axi_.exit1109_proc' to 'Block_myproject_axi_exit1109_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 37.04 seconds; current allocated memory: 206.928 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 207.864 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.71 seconds; current allocated memory: 208.220 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 208.706 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 209.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 209.170 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 209.218 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.314 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 209.705 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_axi_exit1109_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 209.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 210.177 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 210.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 211.229 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_ashr_54ns_32ns_54_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_fpext_32ns_64_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_1024ns_11ns_1024_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_32ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_codeRepl1107_proc46'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 212.725 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_preheader_i_i_033_proc45'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 217.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mul_15s_32s_47_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 219.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:69
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:73
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject_axi.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:17:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:29:5
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject_axi.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24286 ; free virtual = 104708
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24286 ; free virtual = 104708
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:22).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[].1' into 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator=' (firmware/nnet_utils/nnet_types.h:29).
+INFO: [XFORM 203-603] Inlining function 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' into 'myproject' (firmware/myproject.cpp:31).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24269 ; free virtual = 104691
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/myproject_axi.cpp:33: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24258 ; free virtual = 104680
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:1) on argument 'input_1.V.data.V' (firmware/myproject.cpp:7). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:94) on argument 'layer2_out.V.data.V' (firmware/myproject.cpp:8). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data' (firmware/myproject_axi.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data' (firmware/myproject_axi.cpp:3).
+INFO: [XFORM 203-1101] Packing variable 'ctype.data.V' (firmware/myproject_axi.cpp:18) into a 1024-bit variable.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_types.h:27) in function 'myproject' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'tmpdata.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:20) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'in_local.V.data.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'in_local.V.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-721] Change variable 'tmpdata1.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:21) to FIFO automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:24) to a process function for dataflow in function 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'myproject_Block_.preheader.i.i.033_proc45'
+	 'myproject_Loop_1_proc'
+	 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject_axi', detected/extracted 3 process function(s): 
+	 'Block_codeRepl1107_proc46'
+	 'myproject'
+	 'Block_myproject_axi_.exit1109_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'Block_myproject_axi_.exit1109_proc'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:22:25) to (firmware/myproject_axi.cpp:20:41) in function 'Block_codeRepl1107_proc46'... converting 10 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24223 ; free virtual = 104645
+WARNING: [XFORM 203-631] Renaming function 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc' to 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:27:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24171 ; free virtual = 104593
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_.preheader.i.i.033_proc45' to 'myproject_Block_preheader_i_i_033_proc45'.
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' to 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_axi_.exit1109_proc' to 'Block_myproject_axi_exit1109_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.89 seconds; current allocated memory: 207.104 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 208.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 208.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 208.897 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 209.164 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 209.314 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 209.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 209.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 209.851 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_axi_exit1109_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 210.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 210.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 210.546 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 211.361 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_ashr_54ns_32ns_54_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_fpext_32ns_64_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_1024ns_11ns_1024_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_32ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_codeRepl1107_proc46'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 212.904 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_preheader_i_i_033_proc45'.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 217.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mul_15s_32s_47_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 219.650 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------

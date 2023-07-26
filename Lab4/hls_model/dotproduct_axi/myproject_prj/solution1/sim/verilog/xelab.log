@@ -1,0 +1,193 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_axi_top glbl -prj myproject_axi.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject_axi -debug wave 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_axi_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/Block_codeRepl1107_proc46.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_codeRepl1107_proc46
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Block_preheader_i_i_033_proc45.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Block_preheader_i_i_033_proc45
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Loop_1_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/Block_myproject_axi_exit1109_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_myproject_axi_exit1109_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_fpext_32ns_64_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_fpext_32ns_64_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_ashr_54ns_32ns_54_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_ashr_54ns_32ns_54_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_32ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_32ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_1024ns_11ns_1024_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_1024ns_11ns_1024_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_mul_15s_32s_47_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_mul_15s_32s_47_5_1_MulnS_0
+INFO: [VRFC 10-311] analyzing module myproject_axi_mul_15s_32s_47_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Loop_1_proc_w2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc_w2_V_rom
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc_w2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_myproject_Loop_1_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myproject_Loop_1_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myproject_Loop_1_proc_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_lshr_32ns_32ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_lshr_32ns_32ns_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_64ns_32ns_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_64ns_32ns_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w1_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w1_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w1_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d1_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_myproject_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myproject_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myproject_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Block_myproject_axi_exit1109_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Block_myproject_axi_exit1109_proc_U0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/ip/xil_defaultlib/myproject_axi_ap_fpext_1_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'myproject_axi_ap_fpext_1_no_dsp_32'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_9' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/myproject_axi_ap_fpext_1_no_dsp_32.vhd:196]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_exp_table_...
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_pkg
+Compiling package floating_point_v7_1_9.flt_utils
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=8,length=0)\]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_9.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_9.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_9.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=64,r_ew...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [delay_default]
+Compiling architecture synth of entity floating_point_v7_1_9.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9_viv [\floating_point_v7_1_9_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9 [\floating_point_v7_1_9(c_xdevice...]
+Compiling architecture myproject_axi_ap_fpext_1_no_dsp_32_arch of entity xil_defaultlib.myproject_axi_ap_fpext_1_no_dsp_32 [myproject_axi_ap_fpext_1_no_dsp_...]
+Compiling module xil_defaultlib.myproject_axi_fpext_32ns_64_3_1
+Compiling module xil_defaultlib.myproject_axi_ashr_54ns_32ns_54_...
+Compiling module xil_defaultlib.myproject_axi_shl_32ns_32s_32_2_...
+Compiling module xil_defaultlib.myproject_axi_shl_1024ns_11ns_10...
+Compiling module xil_defaultlib.ibuf(W=2)
+Compiling module xil_defaultlib.obuf(W=2)
+Compiling module xil_defaultlib.regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.ibuf(W=33)
+Compiling module xil_defaultlib.obuf(W=33)
+Compiling module xil_defaultlib.regslice_both_default
+Compiling module xil_defaultlib.Block_codeRepl1107_proc46
+Compiling module xil_defaultlib.myproject_Block_preheader_i_i_03...
+Compiling module xil_defaultlib.myproject_Loop_1_proc_w2_V_rom
+Compiling module xil_defaultlib.myproject_Loop_1_proc_w2_V(DataW...
+Compiling module xil_defaultlib.myproject_axi_mul_15s_32s_47_5_1...
+Compiling module xil_defaultlib.myproject_axi_mul_15s_32s_47_5_1...
+Compiling module xil_defaultlib.myproject_Loop_1_proc
+Compiling module xil_defaultlib.myproject_Block_dot_product_arra...
+Compiling module xil_defaultlib.fifo_w32_d32_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d32_A
+Compiling module xil_defaultlib.fifo_w32_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d2_A
+Compiling module xil_defaultlib.start_for_myproject_Loop_1_proc_...
+Compiling module xil_defaultlib.start_for_myproject_Loop_1_proc_...
+Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.myproject_axi_lshr_32ns_32ns_32_...
+Compiling module xil_defaultlib.myproject_axi_shl_64ns_32ns_64_2...
+Compiling module xil_defaultlib.Block_myproject_axi_exit1109_pro...
+Compiling module xil_defaultlib.fifo_w32_d1_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d1_A
+Compiling module xil_defaultlib.fifo_w1_d3_A_shiftReg
+Compiling module xil_defaultlib.fifo_w1_d3_A
+Compiling module xil_defaultlib.start_for_myproject_U0_shiftReg
+Compiling module xil_defaultlib.start_for_myproject_U0
+Compiling module xil_defaultlib.start_for_Block_myproject_axi_ex...
+Compiling module xil_defaultlib.start_for_Block_myproject_axi_ex...
+Compiling module xil_defaultlib.myproject_axi
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_r
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_out_r
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.apatb_myproject_axi_top
+Compiling module work.glbl
+Built simulation snapshot myproject_axi

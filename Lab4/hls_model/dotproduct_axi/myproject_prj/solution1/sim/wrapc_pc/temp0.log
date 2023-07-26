@@ -1,0 +1,4 @@
+INFO: Unable to open input/predictions file, using default input.
+{ data: 0, last: 1 }
+ 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log

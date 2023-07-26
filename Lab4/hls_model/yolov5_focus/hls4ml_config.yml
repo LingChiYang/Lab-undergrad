@@ -1,0 +1,26 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    focus:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+    input_1:
+      Precision:
+        result: ap_fixed<32,16>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<32,16>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model './hls_model/yolov5_focus/keras_model.h5'
+OutputDir: ./hls_model/yolov5_focus
+OutputPredictions: null
+Part: xc7z020clg400-1
+ProjectName: myproject
+Stamp: E8a77FEB

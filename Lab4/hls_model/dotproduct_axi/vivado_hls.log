@@ -1,0 +1,1255 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'hisky' on host 'r7515ed520.EE.NCTU.edu.tw' (Linux_x86_64 version 3.10.0-1160.90.1.el7.x86_64) on Tue Jul 18 15:58:33 CST 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Opening project '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/myproject_axi.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Opening solution '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+***** C SIMULATION *****
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+INFO: Unable to open input/predictions file, using default input.
+{ data: 0, last: 1 }
+ 
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+***** C SIMULATION COMPLETED IN 0h0m0s *****
+***** C/RTL SYNTHESIS *****
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:69
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:31:73
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject_axi.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:17:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:29:5
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject_axi.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24286 ; free virtual = 104708
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24286 ; free virtual = 104708
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:25).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[]' into 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' (firmware/nnet_utils/nnet_dot_product_stream.h:22).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator[].1' into 'nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>::operator=' (firmware/nnet_utils/nnet_types.h:29).
+INFO: [XFORM 203-603] Inlining function 'nnet::dot_product<nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config2>' into 'myproject' (firmware/myproject.cpp:31).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24269 ; free virtual = 104691
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/myproject_axi.cpp:33: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24258 ; free virtual = 104680
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:1) on argument 'input_1.V.data.V' (firmware/myproject.cpp:7). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:12:94) on argument 'layer2_out.V.data.V' (firmware/myproject.cpp:8). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data' (firmware/myproject_axi.cpp:3).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data' (firmware/myproject_axi.cpp:3).
+INFO: [XFORM 203-1101] Packing variable 'ctype.data.V' (firmware/myproject_axi.cpp:18) into a 1024-bit variable.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_types.h:27) in function 'myproject' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/myproject_axi.cpp:17) in function 'myproject_axi' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'tmpdata.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:20) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'in_local.V.data.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'in_local.V.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_local.V.data.V' (firmware/myproject_axi.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-721] Change variable 'tmpdata1.data.V' (firmware/nnet_utils/nnet_dot_product_stream.h:21) to FIFO automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:24) to a process function for dataflow in function 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'myproject_Block_.preheader.i.i.033_proc45'
+	 'myproject_Loop_1_proc'
+	 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject_axi', detected/extracted 3 process function(s): 
+	 'Block_codeRepl1107_proc46'
+	 'myproject'
+	 'Block_myproject_axi_.exit1109_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'Block_myproject_axi_.exit1109_proc'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:22:25) to (firmware/myproject_axi.cpp:20:41) in function 'Block_codeRepl1107_proc46'... converting 10 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24223 ; free virtual = 104645
+WARNING: [XFORM 203-631] Renaming function 'myproject_Block_dot_product<array<ap_fixed<32, 16, 5, 3, 0>, 32u>, array<ap_fixed<32, 16, 5, 3, 0>, 1u>, config2>.exit_proc' to 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' (firmware/nnet_utils/nnet_dot_product_stream.h:27:2)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1046.043 ; gain = 526.004 ; free physical = 24171 ; free virtual = 104593
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_.preheader.i.i.033_proc45' to 'myproject_Block_preheader_i_i_033_proc45'.
+WARNING: [SYN 201-103] Legalizing function name 'myproject_Block_dot_product<array,array<ap_fixed,1u>,config2>.exit_proc' to 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_axi_.exit1109_proc' to 'Block_myproject_axi_exit1109_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.89 seconds; current allocated memory: 207.104 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 208.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 208.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 208.897 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 209.164 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 209.314 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 209.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 209.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 209.851 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_axi_exit1109_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 210.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 210.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 210.546 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 211.361 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_codeRepl1107_proc46' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_ashr_54ns_32ns_54_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_fpext_32ns_64_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_1024ns_11ns_1024_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_32ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_codeRepl1107_proc46'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 212.904 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_preheader_i_i_033_proc45' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_preheader_i_i_033_proc45'.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 217.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mul_15s_32s_47_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 219.650 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 220.201 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 221.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_myproject_axi_exit1109_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_lshr_32ns_32ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_shl_64ns_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_myproject_axi_exit1109_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 222.283 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/in_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/in_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/out_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/out_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject_axi' to 'ap_ctrl_none'.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for myproject_axi
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_axi'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 224.691 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.57 MHz
+INFO: [RTMG 210-286] Generating pipelined shifter : 'myproject_axi_ashr_54ns_32ns_54_2_1'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'myproject_axi_shl_32ns_32s_32_2_1'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'myproject_axi_shl_1024ns_11ns_1024_2_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0'
+INFO: [RTMG 210-279] Implementing memory 'myproject_Loop_1_proc_w2_V_rom' using distributed ROMs.
+INFO: [RTMG 210-285] Implementing FIFO 'tmpdata1_data_V_channel_U(fifo_w32_d32_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_Val2_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_myproject_Loop_1_proc_U0_U(start_for_myproject_Loop_1_proc_U0)' using Shift Registers.
+INFO: [RTMG 210-286] Generating pipelined shifter : 'myproject_axi_lshr_32ns_32ns_32_2_1'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'myproject_axi_shl_64ns_32ns_64_2_1'
+INFO: [RTMG 210-285] Implementing FIFO 'is_last_1_i_0_loc_c_U(fifo_w1_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_myproject_U0_U(start_for_myproject_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Block_myproject_axi_exit1109_proc_U0_U(start_for_Block_myproject_axi_exit1109_proc_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1046.047 ; gain = 526.008 ; free physical = 24139 ; free virtual = 104554
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject_axi.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject_axi.
+***** C/RTL SYNTHESIS COMPLETED IN 0h0m35s *****
+***** C/RTL SIMULATION *****
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+WARNING: [COSIM 212-75] Fifo port 'out_data' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM 212-75] Fifo port 'out_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+   Build using "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_myproject_axi.cpp
+   Compiling myproject_test.cpp_pre.cpp.tb.cpp
+   Compiling myproject_axi.cpp_pre.cpp.tb.cpp
+   Compiling myproject.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: Unable to open input/predictions file, using default input.
+{ data: 0, last: 1 }
+ 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [COSIM 212-302] Starting C TB testing ...  
+INFO: Unable to open input/predictions file, using default input.
+{ data: 0, last: 1 }
+ 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO: [COSIM 212-323] Starting verilog simulation...
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_axi_top glbl -prj myproject_axi.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject_axi -debug wave 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_axi_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/Block_codeRepl1107_proc46.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_codeRepl1107_proc46
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Block_preheader_i_i_033_proc45.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Block_preheader_i_i_033_proc45
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Loop_1_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/Block_myproject_axi_exit1109_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_myproject_axi_exit1109_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_fpext_32ns_64_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_fpext_32ns_64_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_ashr_54ns_32ns_54_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_ashr_54ns_32ns_54_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_32ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_32ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_1024ns_11ns_1024_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_1024ns_11ns_1024_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_mul_15s_32s_47_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_mul_15s_32s_47_5_1_MulnS_0
+INFO: [VRFC 10-311] analyzing module myproject_axi_mul_15s_32s_47_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_Loop_1_proc_w2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc_w2_V_rom
+INFO: [VRFC 10-311] analyzing module myproject_Loop_1_proc_w2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d32_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_myproject_Loop_1_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myproject_Loop_1_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myproject_Loop_1_proc_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_lshr_32ns_32ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_lshr_32ns_32ns_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi_shl_64ns_32ns_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_axi_shl_64ns_32ns_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w1_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w1_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w1_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/fifo_w32_d1_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_myproject_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myproject_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myproject_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/start_for_Block_myproject_axi_exit1109_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Block_myproject_axi_exit1109_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Block_myproject_axi_exit1109_proc_U0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/ip/xil_defaultlib/myproject_axi_ap_fpext_1_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'myproject_axi_ap_fpext_1_no_dsp_32'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_9' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/myproject_axi_ap_fpext_1_no_dsp_32.vhd:196]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_exp_table_...
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_pkg
+Compiling package floating_point_v7_1_9.flt_utils
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=8,length=0)\]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_9.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_9.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_9.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=64,r_ew...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [delay_default]
+Compiling architecture synth of entity floating_point_v7_1_9.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9_viv [\floating_point_v7_1_9_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9 [\floating_point_v7_1_9(c_xdevice...]
+Compiling architecture myproject_axi_ap_fpext_1_no_dsp_32_arch of entity xil_defaultlib.myproject_axi_ap_fpext_1_no_dsp_32 [myproject_axi_ap_fpext_1_no_dsp_...]
+Compiling module xil_defaultlib.myproject_axi_fpext_32ns_64_3_1
+Compiling module xil_defaultlib.myproject_axi_ashr_54ns_32ns_54_...
+Compiling module xil_defaultlib.myproject_axi_shl_32ns_32s_32_2_...
+Compiling module xil_defaultlib.myproject_axi_shl_1024ns_11ns_10...
+Compiling module xil_defaultlib.ibuf(W=2)
+Compiling module xil_defaultlib.obuf(W=2)
+Compiling module xil_defaultlib.regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.ibuf(W=33)
+Compiling module xil_defaultlib.obuf(W=33)
+Compiling module xil_defaultlib.regslice_both_default
+Compiling module xil_defaultlib.Block_codeRepl1107_proc46
+Compiling module xil_defaultlib.myproject_Block_preheader_i_i_03...
+Compiling module xil_defaultlib.myproject_Loop_1_proc_w2_V_rom
+Compiling module xil_defaultlib.myproject_Loop_1_proc_w2_V(DataW...
+Compiling module xil_defaultlib.myproject_axi_mul_15s_32s_47_5_1...
+Compiling module xil_defaultlib.myproject_axi_mul_15s_32s_47_5_1...
+Compiling module xil_defaultlib.myproject_Loop_1_proc
+Compiling module xil_defaultlib.myproject_Block_dot_product_arra...
+Compiling module xil_defaultlib.fifo_w32_d32_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d32_A
+Compiling module xil_defaultlib.fifo_w32_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d2_A
+Compiling module xil_defaultlib.start_for_myproject_Loop_1_proc_...
+Compiling module xil_defaultlib.start_for_myproject_Loop_1_proc_...
+Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.myproject_axi_lshr_32ns_32ns_32_...
+Compiling module xil_defaultlib.myproject_axi_shl_64ns_32ns_64_2...
+Compiling module xil_defaultlib.Block_myproject_axi_exit1109_pro...
+Compiling module xil_defaultlib.fifo_w32_d1_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d1_A
+Compiling module xil_defaultlib.fifo_w1_d3_A_shiftReg
+Compiling module xil_defaultlib.fifo_w1_d3_A
+Compiling module xil_defaultlib.start_for_myproject_U0_shiftReg
+Compiling module xil_defaultlib.start_for_myproject_U0
+Compiling module xil_defaultlib.start_for_Block_myproject_axi_ex...
+Compiling module xil_defaultlib.start_for_Block_myproject_axi_ex...
+Compiling module xil_defaultlib.myproject_axi
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_r
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=1,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_out_r
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.apatb_myproject_axi_top
+Compiling module work.glbl
+Built simulation snapshot myproject_axi
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/xsim.dir/myproject_axi/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/xsim.dir/myproject_axi/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Jul 18 15:59:51 2023. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Jul 18 15:59:51 2023...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/myproject_axi/xsim_script.tcl
+# xsim {myproject_axi} -autoloadwcfg -tclbatch {myproject_axi.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source myproject_axi.tcl
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set out_group [add_wave_group out(axis) -into $coutputgroup]
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/out_r_TREADY -into $out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/out_r_TVALID -into $out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/out_r_TLAST -into $out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/out_r_TDATA -into $out_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set in_group [add_wave_group in(axis) -into $cinputgroup]
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/in_r_TREADY -into $in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/in_r_TVALID -into $in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/in_r_TLAST -into $in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/in_r_TDATA -into $in_group -radix hex
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_myproject_axi_top/AESL_inst_myproject_axi/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_myproject_axi_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/ap_c_n_tvin_trans_num_in_data -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/ap_c_n_tvin_trans_num_in_last_V -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/ap_c_n_tvout_trans_num_out_data -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/ap_c_n_tvout_trans_num_out_last_V -into $tb_simstatus_group -radix hex
+## add_wave /apatb_myproject_axi_top/LENGTH_in_data -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_axi_top/LENGTH_in_last_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_axi_top/LENGTH_out_data -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_axi_top/LENGTH_out_last_V -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_out_group [add_wave_group out(axis) -into $tbcoutputgroup]
+## add_wave /apatb_myproject_axi_top/out_r_TREADY -into $tb_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/out_r_TVALID -into $tb_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/out_r_TLAST -into $tb_out_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/out_r_TDATA -into $tb_out_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_in_group [add_wave_group in(axis) -into $tbcinputgroup]
+## add_wave /apatb_myproject_axi_top/in_r_TREADY -into $tb_in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/in_r_TVALID -into $tb_in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/in_r_TLAST -into $tb_in_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_axi_top/in_r_TDATA -into $tb_in_group -radix hex
+## save_wave_config myproject_axi.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "113000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2908000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2927500 ps : File "/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/sim/verilog/myproject_axi.autotb.v" Line 218
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Jul 18 16:00:01 2023...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: Unable to open input/predictions file, using default input.
+{ data: 0, last: 1 }
+ 
+INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
+INFO:
+Report time       : Tue Jul 18 15:59:40 CST 2023.
+Solution          : solution1.
+Simulation tool   : xsim.
+
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|          |          |                    Latency                    |                    Interval                   |
++   RTL    +  Status  +-----------------------------------------------+-----------------------------------------------+
+|          |          |      min      |      avg      |      max      |      min      |      avg      |      max      |
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+|      VHDL|        NA|             NA|             NA|             NA|             NA|             NA|             NA|
+|   Verilog|      Pass|             NA|             NA|             NA|             NA|             NA|             NA|
++----------+----------+-----------------------------------------------+-----------------------------------------------+
+
+***** C/RTL SIMULATION COMPLETED IN 0h0m50s *****
+***** C/RTL VALIDATION *****
+INFO: Test PASSED
+***** EXPORT IP *****
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'myproject_axi_ap_fpext_1_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'myproject_axi_ap_fpext_1_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'myproject_axi_ap_fpext_1_no_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 18 16:00:14 2023...
+***** EXPORT IP COMPLETED IN 0h0m13s *****
+***** VIVADO SYNTHESIS *****
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source vivado_synth.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir project.tcl]
+## variable project_name
+## set project_name "myproject"
+## variable backend
+## set backend "vivadoaccelerator"
+## variable part
+## set part "xc7z020clg400-1"
+## variable clock_period
+## set clock_period 5
+## variable clock_uncertainty
+## set clock_uncertainty 12.5%
+## set bit_width_hls_output 32
+## set bit_width_hls_input 32
+# add_files ${project_name}_prj/solution1/syn/vhdl
+# synth_design -top ${project_name} -part $part
+Command: synth_design -top myproject -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8085 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1739.457 ; gain = 184.578 ; free physical = 23625 ; free virtual = 104049
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:123]
+INFO: [Synth 8-3491] module 'myproject_Block_preheader_i_i_033_proc45' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:12' bound to instance 'myproject_Block_preheader_i_i_033_proc45_U0' of component 'myproject_Block_preheader_i_i_033_proc45' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:395]
+INFO: [Synth 8-638] synthesizing module 'myproject_Block_preheader_i_i_033_proc45' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:126]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:198]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:237]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:239]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:241]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:243]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:245]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:247]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:249]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:251]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:253]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:255]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:257]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:259]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:261]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:263]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:265]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:267]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:269]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:273]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:275]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:277]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:285]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:289]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:293]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:297]
+INFO: [Synth 8-256] done synthesizing module 'myproject_Block_preheader_i_i_033_proc45' (1#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_preheader_i_i_033_proc45.vhd:126]
+INFO: [Synth 8-3491] module 'myproject_Loop_1_proc' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:12' bound to instance 'myproject_Loop_1_proc_U0' of component 'myproject_Loop_1_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:507]
+INFO: [Synth 8-638] synthesizing module 'myproject_Loop_1_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:28]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:56]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:59]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:65]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:74]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:78]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:80]
+	Parameter DataWidth bound to: 15 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_Loop_1_proc_w2_V' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:75' bound to instance 'w2_V_U' of component 'myproject_Loop_1_proc_w2_V' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'myproject_Loop_1_proc_w2_V' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:88]
+	Parameter DataWidth bound to: 15 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_Loop_1_proc_w2_V_rom' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:9' bound to instance 'myproject_Loop_1_proc_w2_V_rom_U' of component 'myproject_Loop_1_proc_w2_V_rom' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'myproject_Loop_1_proc_w2_V_rom' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:24]
+	Parameter DWIDTH bound to: 15 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'myproject_Loop_1_proc_w2_V_rom' (2#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'myproject_Loop_1_proc_w2_V' (3#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc_w2_V.vhd:88]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 47 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_15s_32s_47_5_1' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:53' bound to instance 'myproject_axi_mul_15s_32s_47_5_1_U78' of component 'myproject_axi_mul_15s_32s_47_5_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_15s_32s_47_5_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:69]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 47 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:9' bound to instance 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U' of component 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_15s_32s_47_5_1_MulnS_0' (4#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_axi_mul_15s_32s_47_5_1' (5#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_axi_mul_15s_32s_47_5_1.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'myproject_Loop_1_proc' (6#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Loop_1_proc.vhd:28]
+INFO: [Synth 8-3491] module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:12' bound to instance 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0' of component 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:521]
+INFO: [Synth 8-638] synthesizing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:28]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:36]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' (7#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:28]
+INFO: [Synth 8-3491] module 'fifo_w32_d32_A' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:47' bound to instance 'tmpdata1_data_V_channel_U' of component 'fifo_w32_d32_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:535]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d32_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w32_d32_A_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:10' bound to instance 'U_fifo_w32_d32_A_shiftReg' of component 'fifo_w32_d32_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d32_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d32_A_shiftReg' (8#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d32_A' (9#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:66]
+INFO: [Synth 8-3491] module 'fifo_w32_d2_A' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:47' bound to instance 'p_Val2_loc_channel_U' of component 'fifo_w32_d2_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:548]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d2_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w32_d2_A_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:10' bound to instance 'U_fifo_w32_d2_A_shiftReg' of component 'fifo_w32_d2_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d2_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d2_A_shiftReg' (10#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d2_A' (11#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:66]
+INFO: [Synth 8-3491] module 'start_for_myproject_Loop_1_proc_U0' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:47' bound to instance 'start_for_myproject_Loop_1_proc_U0_U' of component 'start_for_myproject_Loop_1_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:561]
+INFO: [Synth 8-638] synthesizing module 'start_for_myproject_Loop_1_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'start_for_myproject_Loop_1_proc_U0_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:10' bound to instance 'U_start_for_myproject_Loop_1_proc_U0_shiftReg' of component 'start_for_myproject_Loop_1_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'start_for_myproject_Loop_1_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:23]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_myproject_Loop_1_proc_U0_shiftReg' (12#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'start_for_myproject_Loop_1_proc_U0' (13#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/start_for_myproject_Loop_1_proc_U0.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (14#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/myproject.vhd:123]
+WARNING: [Synth 8-3331] design myproject_axi_mul_15s_32s_47_5_1 has unconnected port reset
+WARNING: [Synth 8-3331] design myproject_Loop_1_proc_w2_V has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1804.211 ; gain = 249.332 ; free physical = 23644 ; free virtual = 104069
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1807.176 ; gain = 252.297 ; free physical = 23643 ; free virtual = 104068
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1815.184 ; gain = 260.305 ; free physical = 23640 ; free virtual = 104065
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct_axi/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:102]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1843.102 ; gain = 288.223 ; free physical = 23609 ; free virtual = 104035
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               47 Bit    Registers := 4     
+	               32 Bit    Registers := 37    
+	               15 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Multipliers : 
+	                15x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myproject 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module myproject_Block_preheader_i_i_033_proc45 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module myproject_Loop_1_proc_w2_V_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+Module myproject_axi_mul_15s_32s_47_5_1_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               47 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
++---Multipliers : 
+	                15x32  Multipliers := 1     
+Module myproject_Loop_1_proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               47 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module fifo_w32_d32_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module fifo_w32_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module fifo_w32_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module start_for_myproject_Loop_1_proc_U0_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_myproject_Loop_1_proc_U0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+DSP Report: Generating DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg, operation Mode is: (A''*B'')'.
+DSP Report: register myproject_Loop_1_proc_U0/w2_V_load_reg_154_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/a_reg0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: operator myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/tmp_product is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: operator myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/tmp_product is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/a_reg0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/b_reg0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff0_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff1_reg is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: operator myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/tmp_product is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+DSP Report: operator myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/tmp_product is absorbed into DSP myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (myproject_Block_preheader_i_i_033_proc45_U0/ap_done_reg_reg)
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[47]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[46]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[45]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[44]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[43]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[42]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[41]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[40]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[39]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[38]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[37]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[36]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[35]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[34]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[33]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[32]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[31]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[30]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[29]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[28]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[27]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[26]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[25]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[24]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[23]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[22]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[21]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[20]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[19]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[18]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[17]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[14]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[13]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[12]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[11]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[10]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[9]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[8]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[7]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[6]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[5]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[4]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[3]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[2]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[1]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (myproject_Loop_1_proc_U0/myproject_axi_mul_15s_32s_47_5_1_U78/myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U/buff2_reg[0]) is unused and will be removed from module myproject.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 2104.816 ; gain = 549.938 ; free physical = 23377 ; free virtual = 103806
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------------+------------+---------------+----------------+
+|Module Name                    | RTL Object | Depth x Width | Implemented As | 
++-------------------------------+------------+---------------+----------------+
+|myproject_Loop_1_proc_w2_V_rom | p_0_out    | 32x15         | LUT            | 
+|myproject                      | p_0_out    | 32x15         | LUT            | 
++-------------------------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myproject   | (A''*B'')'            | 18     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|myproject   | (PCIN>>17)+(A''*B'')' | 15     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 2104.820 ; gain = 549.941 ; free physical = 23398 ; free virtual = 103827
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2112.824 ; gain = 557.945 ; free physical = 23396 ; free virtual = 103825
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23396 ; free virtual = 103825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23396 ; free virtual = 103825
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23395 ; free virtual = 103824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23395 ; free virtual = 103824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23395 ; free virtual = 103824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23394 ; free virtual = 103823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name        | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[31] | 32     | 32         | 0      | 32      | 0      | 0      | 0      | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |     9|
+|3     |DSP48E1 |     2|
+|4     |LUT1    |     2|
+|5     |LUT2    |    70|
+|6     |LUT3    |    40|
+|7     |LUT4    |    57|
+|8     |LUT5    |    62|
+|9     |LUT6    |   474|
+|10    |SRLC32E |    32|
+|11    |FDRE    |  1227|
+|12    |FDSE    |    12|
+|13    |IBUF    |  1061|
+|14    |OBUF    |    68|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------+
+|      |Instance                                                                   |Module                                                                |Cells |
++------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------+
+|1     |top                                                                        |                                                                      |  3117|
+|2     |  myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0 |myproject_Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc |     2|
+|3     |  myproject_Block_preheader_i_i_033_proc45_U0                              |myproject_Block_preheader_i_i_033_proc45                              |  1602|
+|4     |  myproject_Loop_1_proc_U0                                                 |myproject_Loop_1_proc                                                 |   208|
+|5     |    myproject_axi_mul_15s_32s_47_5_1_U78                                   |myproject_axi_mul_15s_32s_47_5_1                                      |     5|
+|6     |      myproject_axi_mul_15s_32s_47_5_1_MulnS_0_U                           |myproject_axi_mul_15s_32s_47_5_1_MulnS_0                              |     5|
+|7     |    w2_V_U                                                                 |myproject_Loop_1_proc_w2_V                                            |    30|
+|8     |      myproject_Loop_1_proc_w2_V_rom_U                                     |myproject_Loop_1_proc_w2_V_rom                                        |    30|
+|9     |  p_Val2_loc_channel_U                                                     |fifo_w32_d2_A                                                         |   106|
+|10    |    U_fifo_w32_d2_A_shiftReg                                               |fifo_w32_d2_A_shiftReg                                                |    96|
+|11    |  start_for_myproject_Loop_1_proc_U0_U                                     |start_for_myproject_Loop_1_proc_U0                                    |    11|
+|12    |  tmpdata1_data_V_channel_U                                                |fifo_w32_d32_A                                                        |    58|
+|13    |    U_fifo_w32_d32_A_shiftReg                                              |fifo_w32_d32_A_shiftReg                                               |    37|
++------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23393 ; free virtual = 103822
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.828 ; gain = 557.949 ; free physical = 23394 ; free virtual = 103823
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2112.832 ; gain = 557.949 ; free physical = 23394 ; free virtual = 103823
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2112.832 ; gain = 0.000 ; free physical = 23459 ; free virtual = 103888
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2168.855 ; gain = 0.000 ; free physical = 23388 ; free virtual = 103817
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+100 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 2168.855 ; gain = 614.086 ; free physical = 23521 ; free virtual = 103950
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 18 16:00:51 2023...
+***** VIVADO SYNTHESIS COMPLETED IN 0h0m37s *****
+INFO: [HLS 200-112] Total elapsed time: 138.57 seconds; peak allocated memory: 224.691 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue Jul 18 16:00:52 2023...

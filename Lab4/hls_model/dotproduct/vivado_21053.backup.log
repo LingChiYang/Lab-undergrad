@@ -1,0 +1,871 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jul 18 14:47:45 2023
+# Process ID: 21053
+# Current directory: /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct
+# Command line: vivado -mode batch -source vivado_synth.tcl
+# Log file: /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/vivado.log
+# Journal file: /home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/vivado.jou
+#-----------------------------------------------------------
+source vivado_synth.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir project.tcl]
+## variable project_name
+## set project_name "myproject"
+## variable backend
+## set backend "vivado"
+## variable part
+## set part "xc7z020clg400-1"
+## variable clock_period
+## set clock_period 5
+## variable clock_uncertainty
+## set clock_uncertainty 12.5%
+# add_files ${project_name}_prj/solution1/syn/vhdl
+# synth_design -top ${project_name} -part $part
+Command: synth_design -top myproject -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21067 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.461 ; gain = 183.578 ; free physical = 24204 ; free virtual = 104223
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:122]
+INFO: [Synth 8-3491] module 'Block_preheader_i_i_04_proc27' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:12' bound to instance 'Block_preheader_i_i_04_proc27_U0' of component 'Block_preheader_i_i_04_proc27' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:398]
+INFO: [Synth 8-638] synthesizing module 'Block_preheader_i_i_04_proc27' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:126]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:198]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:201]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:237]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:239]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:241]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:243]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:245]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:247]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:249]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:251]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:253]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:255]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:257]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:259]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:261]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:263]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:265]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:267]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:269]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:273]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:275]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:277]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:285]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:289]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:293]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:297]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_0_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:512]
+INFO: [Synth 8-638] synthesizing module 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf' (1#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf' (2#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both' (3#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_1_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:526]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_2_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:540]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_3_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:554]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_4_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:568]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_5_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:582]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_6_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:596]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_7_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:610]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_8_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:624]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_9_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:638]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_10_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:652]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_11_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:666]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_12_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:680]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_13_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:694]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_14_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:708]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_15_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:722]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_16_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:736]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_17_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:750]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_18_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:764]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_19_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:778]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_20_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:792]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_21_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:806]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_22_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:820]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_23_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:834]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_24_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:848]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_25_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:862]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_26_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:876]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_27_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:890]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_28_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:904]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_29_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:918]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_30_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:932]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_input_1_V_data_31_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:946]
+INFO: [Synth 8-256] done synthesizing module 'Block_preheader_i_i_04_proc27' (4#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_preheader_i_i_04_proc27.vhd:126]
+INFO: [Synth 8-3491] module 'Loop_1_proc' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:12' bound to instance 'Loop_1_proc_U0' of component 'Loop_1_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:510]
+INFO: [Synth 8-638] synthesizing module 'Loop_1_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:28]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:56]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:59]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:65]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:74]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:78]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:80]
+	Parameter DataWidth bound to: 14 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Loop_1_proc_w2_V' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:75' bound to instance 'w2_V_U' of component 'Loop_1_proc_w2_V' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'Loop_1_proc_w2_V' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:88]
+	Parameter DataWidth bound to: 14 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Loop_1_proc_w2_V_rom' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:9' bound to instance 'Loop_1_proc_w2_V_rom_U' of component 'Loop_1_proc_w2_V_rom' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'Loop_1_proc_w2_V_rom' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:24]
+	Parameter DWIDTH bound to: 14 - type: integer 
+	Parameter AWIDTH bound to: 5 - type: integer 
+	Parameter MEM_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'Loop_1_proc_w2_V_rom' (5#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Loop_1_proc_w2_V' (6#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc_w2_V.vhd:88]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 46 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_14s_32s_46_5_1' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:53' bound to instance 'myproject_mul_14s_32s_46_5_1_U35' of component 'myproject_mul_14s_32s_46_5_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_14s_32s_46_5_1' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:69]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 46 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_14s_32s_46_5_1_MulnS_0' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:9' bound to instance 'myproject_mul_14s_32s_46_5_1_MulnS_0_U' of component 'myproject_mul_14s_32s_46_5_1_MulnS_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_14s_32s_46_5_1_MulnS_0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_14s_32s_46_5_1_MulnS_0' (7#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_14s_32s_46_5_1' (8#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject_mul_14s_32s_46_5_1.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'Loop_1_proc' (9#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Loop_1_proc.vhd:28]
+INFO: [Synth 8-3491] module 'Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:12' bound to instance 'Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0' of component 'Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:524]
+INFO: [Synth 8-638] synthesizing module 'Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:28]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:38]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:41]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:44]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_layer2_out_V_data_0_V_U' of component 'regslice_both' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc' (10#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc.vhd:28]
+INFO: [Synth 8-3491] module 'fifo_w32_d32_A' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:47' bound to instance 'tmpdata1_data_V_channel_U' of component 'fifo_w32_d32_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:538]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d32_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w32_d32_A_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:10' bound to instance 'U_fifo_w32_d32_A_shiftReg' of component 'fifo_w32_d32_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d32_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d32_A_shiftReg' (11#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d32_A' (12#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:66]
+INFO: [Synth 8-3491] module 'fifo_w32_d2_A' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:47' bound to instance 'p_Val2_loc_channel_U' of component 'fifo_w32_d2_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:551]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d2_A' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w32_d2_A_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:10' bound to instance 'U_fifo_w32_d2_A_shiftReg' of component 'fifo_w32_d2_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d2_A_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d2_A_shiftReg' (13#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d2_A' (14#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d2_A.vhd:66]
+INFO: [Synth 8-3491] module 'start_for_Loop_1_proc_U0' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:47' bound to instance 'start_for_Loop_1_proc_U0_U' of component 'start_for_Loop_1_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:564]
+INFO: [Synth 8-638] synthesizing module 'start_for_Loop_1_proc_U0' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:66]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'start_for_Loop_1_proc_U0_shiftReg' declared at '/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:10' bound to instance 'U_start_for_Loop_1_proc_U0_shiftReg' of component 'start_for_Loop_1_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'start_for_Loop_1_proc_U0_shiftReg' [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:23]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_Loop_1_proc_U0_shiftReg' (15#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'start_for_Loop_1_proc_U0' (16#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/start_for_Loop_1_proc_U0.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (17#1) [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/myproject.vhd:122]
+WARNING: [Synth 8-3331] design myproject_mul_14s_32s_46_5_1 has unconnected port reset
+WARNING: [Synth 8-3331] design Loop_1_proc_w2_V has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.215 ; gain = 247.332 ; free physical = 24230 ; free virtual = 104250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.215 ; gain = 247.332 ; free physical = 24228 ; free virtual = 104248
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1810.219 ; gain = 255.336 ; free physical = 24228 ; free virtual = 104248
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/hisky/Lab-undergrad/Lab4/hls_model/dotproduct/myproject_prj/solution1/syn/vhdl/fifo_w32_d32_A.vhd:102]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1837.137 ; gain = 282.254 ; free physical = 24186 ; free virtual = 104207
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               46 Bit    Registers := 4     
+	               33 Bit    Registers := 66    
+	               32 Bit    Registers := 37    
+	               14 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                2 Bit    Registers := 36    
+	                1 Bit    Registers := 12    
++---Multipliers : 
+	                14x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 33    
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 35    
+	   4 Input      2 Bit        Muxes := 33    
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 150   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myproject 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xil_defaultlib_ibuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Block_preheader_i_i_04_proc27 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module Loop_1_proc_w2_V_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+Module myproject_mul_14s_32s_46_5_1_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               46 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
++---Multipliers : 
+	                14x32  Multipliers := 1     
+Module Loop_1_proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               46 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module fifo_w32_d32_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module fifo_w32_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module fifo_w32_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module start_for_Loop_1_proc_U0_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_Loop_1_proc_U0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+DSP Report: Generating DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg, operation Mode is: (A''*B'')'.
+DSP Report: register Loop_1_proc_U0/w2_V_load_reg_164_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/a_reg0_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff0_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: operator Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/tmp_product is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: operator Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/tmp_product is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg, operation Mode is: (PCIN>>17)+(A''*BCIN2)'.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/b_reg0_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff0_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff0_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: register Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff1_reg is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: operator Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/tmp_product is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+DSP Report: operator Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/tmp_product is absorbed into DSP Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Block_preheader_i_i_04_proc27_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[47]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[46]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[45]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[44]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[43]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[42]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[41]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[40]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[39]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[38]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[37]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[36]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[35]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[34]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[33]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[32]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[31]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[30]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[29]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[28]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[27]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[26]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[25]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[24]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[23]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[22]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[21]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[20]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[19]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[18]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[17]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[14]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[13]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[12]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[11]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[10]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[9]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[8]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[7]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[6]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[5]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[4]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[3]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[2]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[1]) is unused and will be removed from module myproject.
+WARNING: [Synth 8-3332] Sequential element (Loop_1_proc_U0/myproject_mul_14s_32s_46_5_1_U35/myproject_mul_14s_32s_46_5_1_MulnS_0_U/buff2_reg[0]) is unused and will be removed from module myproject.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2111.828 ; gain = 556.945 ; free physical = 23956 ; free virtual = 103981
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------------+------------+---------------+----------------+
+|Module Name          | RTL Object | Depth x Width | Implemented As | 
++---------------------+------------+---------------+----------------+
+|Loop_1_proc_w2_V_rom | p_0_out    | 32x14         | LUT            | 
+|myproject            | p_0_out    | 32x14         | LUT            | 
++---------------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myproject   | (A''*B'')'              | 18     | 14     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|myproject   | (PCIN>>17)+(A''*BCIN2)' | 15     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23940 ; free virtual = 103964
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23934 ; free virtual = 103959
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23933 ; free virtual = 103957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23932 ; free virtual = 103956
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23933 ; free virtual = 103957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23934 ; free virtual = 103958
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23933 ; free virtual = 103957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23944 ; free virtual = 103968
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name        | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[31] | 32     | 32         | 0      | 32      | 0      | 0      | 0      | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |     9|
+|3     |DSP48E1 |     2|
+|4     |LUT1    |     5|
+|5     |LUT2    |   137|
+|6     |LUT3    |  1128|
+|7     |LUT4    |    92|
+|8     |LUT5    |    65|
+|9     |LUT6    |   509|
+|10    |SRLC32E |    32|
+|11    |FDRE    |  3390|
+|12    |FDSE    |    13|
+|13    |IBUF    |  1060|
+|14    |OBUF    |    68|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+|      |Instance                                                         |Module                                                      |Cells |
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+|1     |top                                                              |                                                            |  6511|
+|2     |  Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc_U0 |Block_dot_product_array_array_ap_fixed_1u_config2_exit_proc |    81|
+|3     |    regslice_both_layer2_out_V_data_0_V_U                        |regslice_both_93                                            |    79|
+|4     |      ibuf_inst                                                  |xil_defaultlib_ibuf_94                                      |    40|
+|5     |      obuf_inst                                                  |xil_defaultlib_obuf_95                                      |    37|
+|6     |  Block_preheader_i_i_04_proc27_U0                               |Block_preheader_i_i_04_proc27                               |  4902|
+|7     |    regslice_both_input_1_V_data_0_V_U                           |regslice_both                                               |   199|
+|8     |      ibuf_inst                                                  |xil_defaultlib_ibuf_91                                      |    67|
+|9     |      obuf_inst                                                  |xil_defaultlib_obuf_92                                      |   132|
+|10    |    regslice_both_input_1_V_data_10_V_U                          |regslice_both_0                                             |   104|
+|11    |      ibuf_inst                                                  |xil_defaultlib_ibuf_89                                      |    67|
+|12    |      obuf_inst                                                  |xil_defaultlib_obuf_90                                      |    37|
+|13    |    regslice_both_input_1_V_data_11_V_U                          |regslice_both_1                                             |   103|
+|14    |      ibuf_inst                                                  |xil_defaultlib_ibuf_87                                      |    67|
+|15    |      obuf_inst                                                  |xil_defaultlib_obuf_88                                      |    36|
+|16    |    regslice_both_input_1_V_data_12_V_U                          |regslice_both_2                                             |   103|
+|17    |      ibuf_inst                                                  |xil_defaultlib_ibuf_85                                      |    67|
+|18    |      obuf_inst                                                  |xil_defaultlib_obuf_86                                      |    36|
+|19    |    regslice_both_input_1_V_data_13_V_U                          |regslice_both_3                                             |   104|
+|20    |      ibuf_inst                                                  |xil_defaultlib_ibuf_83                                      |    67|
+|21    |      obuf_inst                                                  |xil_defaultlib_obuf_84                                      |    37|
+|22    |    regslice_both_input_1_V_data_14_V_U                          |regslice_both_4                                             |   103|
+|23    |      ibuf_inst                                                  |xil_defaultlib_ibuf_81                                      |    67|
+|24    |      obuf_inst                                                  |xil_defaultlib_obuf_82                                      |    36|
+|25    |    regslice_both_input_1_V_data_15_V_U                          |regslice_both_5                                             |   103|
+|26    |      ibuf_inst                                                  |xil_defaultlib_ibuf_79                                      |    67|
+|27    |      obuf_inst                                                  |xil_defaultlib_obuf_80                                      |    36|
+|28    |    regslice_both_input_1_V_data_16_V_U                          |regslice_both_6                                             |   103|
+|29    |      ibuf_inst                                                  |xil_defaultlib_ibuf_77                                      |    67|
+|30    |      obuf_inst                                                  |xil_defaultlib_obuf_78                                      |    36|
+|31    |    regslice_both_input_1_V_data_17_V_U                          |regslice_both_7                                             |   103|
+|32    |      ibuf_inst                                                  |xil_defaultlib_ibuf_75                                      |    67|
+|33    |      obuf_inst                                                  |xil_defaultlib_obuf_76                                      |    36|
+|34    |    regslice_both_input_1_V_data_18_V_U                          |regslice_both_8                                             |   104|
+|35    |      ibuf_inst                                                  |xil_defaultlib_ibuf_73                                      |    67|
+|36    |      obuf_inst                                                  |xil_defaultlib_obuf_74                                      |    37|
+|37    |    regslice_both_input_1_V_data_19_V_U                          |regslice_both_9                                             |   103|
+|38    |      ibuf_inst                                                  |xil_defaultlib_ibuf_71                                      |    67|
+|39    |      obuf_inst                                                  |xil_defaultlib_obuf_72                                      |    36|
+|40    |    regslice_both_input_1_V_data_1_V_U                           |regslice_both_10                                            |   103|
+|41    |      ibuf_inst                                                  |xil_defaultlib_ibuf_69                                      |    67|
+|42    |      obuf_inst                                                  |xil_defaultlib_obuf_70                                      |    36|
+|43    |    regslice_both_input_1_V_data_20_V_U                          |regslice_both_11                                            |   104|
+|44    |      ibuf_inst                                                  |xil_defaultlib_ibuf_67                                      |    67|
+|45    |      obuf_inst                                                  |xil_defaultlib_obuf_68                                      |    37|
+|46    |    regslice_both_input_1_V_data_21_V_U                          |regslice_both_12                                            |   103|
+|47    |      ibuf_inst                                                  |xil_defaultlib_ibuf_65                                      |    67|
+|48    |      obuf_inst                                                  |xil_defaultlib_obuf_66                                      |    36|
+|49    |    regslice_both_input_1_V_data_22_V_U                          |regslice_both_13                                            |   103|
+|50    |      ibuf_inst                                                  |xil_defaultlib_ibuf_63                                      |    67|
+|51    |      obuf_inst                                                  |xil_defaultlib_obuf_64                                      |    36|
+|52    |    regslice_both_input_1_V_data_23_V_U                          |regslice_both_14                                            |   103|
+|53    |      ibuf_inst                                                  |xil_defaultlib_ibuf_61                                      |    67|
+|54    |      obuf_inst                                                  |xil_defaultlib_obuf_62                                      |    36|
+|55    |    regslice_both_input_1_V_data_24_V_U                          |regslice_both_15                                            |   104|
+|56    |      ibuf_inst                                                  |xil_defaultlib_ibuf_59                                      |    67|
+|57    |      obuf_inst                                                  |xil_defaultlib_obuf_60                                      |    37|
+|58    |    regslice_both_input_1_V_data_25_V_U                          |regslice_both_16                                            |   103|
+|59    |      ibuf_inst                                                  |xil_defaultlib_ibuf_57                                      |    67|
+|60    |      obuf_inst                                                  |xil_defaultlib_obuf_58                                      |    36|
+|61    |    regslice_both_input_1_V_data_26_V_U                          |regslice_both_17                                            |   103|
+|62    |      ibuf_inst                                                  |xil_defaultlib_ibuf_55                                      |    67|
+|63    |      obuf_inst                                                  |xil_defaultlib_obuf_56                                      |    36|
+|64    |    regslice_both_input_1_V_data_27_V_U                          |regslice_both_18                                            |   103|
+|65    |      ibuf_inst                                                  |xil_defaultlib_ibuf_53                                      |    67|
+|66    |      obuf_inst                                                  |xil_defaultlib_obuf_54                                      |    36|
+|67    |    regslice_both_input_1_V_data_28_V_U                          |regslice_both_19                                            |   115|
+|68    |      ibuf_inst                                                  |xil_defaultlib_ibuf_51                                      |    67|
+|69    |      obuf_inst                                                  |xil_defaultlib_obuf_52                                      |    48|
+|70    |    regslice_both_input_1_V_data_29_V_U                          |regslice_both_20                                            |   103|
+|71    |      ibuf_inst                                                  |xil_defaultlib_ibuf_49                                      |    67|
+|72    |      obuf_inst                                                  |xil_defaultlib_obuf_50                                      |    36|
+|73    |    regslice_both_input_1_V_data_2_V_U                           |regslice_both_21                                            |   103|
+|74    |      ibuf_inst                                                  |xil_defaultlib_ibuf_47                                      |    67|
+|75    |      obuf_inst                                                  |xil_defaultlib_obuf_48                                      |    36|
+|76    |    regslice_both_input_1_V_data_30_V_U                          |regslice_both_22                                            |   103|
+|77    |      ibuf_inst                                                  |xil_defaultlib_ibuf_45                                      |    67|
+|78    |      obuf_inst                                                  |xil_defaultlib_obuf_46                                      |    36|
+|79    |    regslice_both_input_1_V_data_31_V_U                          |regslice_both_23                                            |   105|
+|80    |      ibuf_inst                                                  |xil_defaultlib_ibuf_43                                      |    67|
+|81    |      obuf_inst                                                  |xil_defaultlib_obuf_44                                      |    38|
+|82    |    regslice_both_input_1_V_data_3_V_U                           |regslice_both_24                                            |   103|
+|83    |      ibuf_inst                                                  |xil_defaultlib_ibuf_41                                      |    67|
+|84    |      obuf_inst                                                  |xil_defaultlib_obuf_42                                      |    36|
+|85    |    regslice_both_input_1_V_data_4_V_U                           |regslice_both_25                                            |   103|
+|86    |      ibuf_inst                                                  |xil_defaultlib_ibuf_39                                      |    67|
+|87    |      obuf_inst                                                  |xil_defaultlib_obuf_40                                      |    36|
+|88    |    regslice_both_input_1_V_data_5_V_U                           |regslice_both_26                                            |   103|
+|89    |      ibuf_inst                                                  |xil_defaultlib_ibuf_37                                      |    67|
+|90    |      obuf_inst                                                  |xil_defaultlib_obuf_38                                      |    36|
+|91    |    regslice_both_input_1_V_data_6_V_U                           |regslice_both_27                                            |   104|
+|92    |      ibuf_inst                                                  |xil_defaultlib_ibuf_35                                      |    67|
+|93    |      obuf_inst                                                  |xil_defaultlib_obuf_36                                      |    37|
+|94    |    regslice_both_input_1_V_data_7_V_U                           |regslice_both_28                                            |   103|
+|95    |      ibuf_inst                                                  |xil_defaultlib_ibuf_33                                      |    67|
+|96    |      obuf_inst                                                  |xil_defaultlib_obuf_34                                      |    36|
+|97    |    regslice_both_input_1_V_data_8_V_U                           |regslice_both_29                                            |   103|
+|98    |      ibuf_inst                                                  |xil_defaultlib_ibuf_31                                      |    67|
+|99    |      obuf_inst                                                  |xil_defaultlib_obuf_32                                      |    36|
+|100   |    regslice_both_input_1_V_data_9_V_U                           |regslice_both_30                                            |   103|
+|101   |      ibuf_inst                                                  |xil_defaultlib_ibuf                                         |    67|
+|102   |      obuf_inst                                                  |xil_defaultlib_obuf                                         |    36|
+|103   |  Loop_1_proc_U0                                                 |Loop_1_proc                                                 |   192|
+|104   |    myproject_mul_14s_32s_46_5_1_U35                             |myproject_mul_14s_32s_46_5_1                                |     4|
+|105   |      myproject_mul_14s_32s_46_5_1_MulnS_0_U                     |myproject_mul_14s_32s_46_5_1_MulnS_0                        |     4|
+|106   |    w2_V_U                                                       |Loop_1_proc_w2_V                                            |    28|
+|107   |      Loop_1_proc_w2_V_rom_U                                     |Loop_1_proc_w2_V_rom                                        |    28|
+|108   |  p_Val2_loc_channel_U                                           |fifo_w32_d2_A                                               |   138|
+|109   |    U_fifo_w32_d2_A_shiftReg                                     |fifo_w32_d2_A_shiftReg                                      |   128|
+|110   |  start_for_Loop_1_proc_U0_U                                     |start_for_Loop_1_proc_U0                                    |    12|
+|111   |  tmpdata1_data_V_channel_U                                      |fifo_w32_d32_A                                              |    57|
+|112   |    U_fifo_w32_d32_A_shiftReg                                    |fifo_w32_d32_A_shiftReg                                     |    37|
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23945 ; free virtual = 103969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.738 ; gain = 565.855 ; free physical = 23948 ; free virtual = 103972
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2120.742 ; gain = 565.855 ; free physical = 23948 ; free virtual = 103972
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2120.742 ; gain = 0.000 ; free physical = 23997 ; free virtual = 104021
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2176.766 ; gain = 0.000 ; free physical = 23920 ; free virtual = 103944
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2176.766 ; gain = 621.992 ; free physical = 24053 ; free virtual = 104077
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 18 14:48:25 2023...
